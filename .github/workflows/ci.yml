@@ -26,9 +26,12 @@ jobs:
           # sudo apt update -qq -y
           # sudo apt -qq --yes install podman
           # install ansible and molecule
-          sudo apt install podman
+          sudo apt install podman -y
           sudo sed -i "s/# unqualified-search-registries.*/unqualified-search-registries\ =\ [\"docker.io\"]/" /etc/containers/registries.conf
           pip3 install yamllint ansible-lint ansible molecule[podman]
 
       - name: Molecule test
         run: molecule test
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
