@@ -14,7 +14,7 @@ This Ansible role:
 
 ### Status:
 
-[![Actions Status](https://github.com/rossijonas/ansible-role-dnf-system-update/workflows/CI/badge.svg)](https://github.com/rossijonas/ansible-role-dnf-system-update/actions)
+[![Actions Status](https://github.com/rossijonas/ansible-role-dnf-update/workflows/CI/badge.svg)](https://github.com/rossijonas/ansible-role-dnf-update/actions)
 
 ## Requirements
 
