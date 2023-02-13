@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include rossijonas.dnf_system_update"
+      include_role:
+        name: "rossijonas.dnf_system_update"

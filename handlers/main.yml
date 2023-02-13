@@ -1,0 +1,5 @@
+---
+# handlers file for dnf_system_update
+- name: Reboot when packages were updated
+  reboot:
+  when: dnfupdate_status.changed

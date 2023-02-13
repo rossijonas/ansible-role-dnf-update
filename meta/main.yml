@@ -1,0 +1,28 @@
+---
+galaxy_info:
+  author: Jonas B. R.
+  role_name: dnfupdate
+  namespace: rossijonas
+  description: Apply system updates using the `dnf` package manager.
+  company:
+
+  license: MIT
+
+  min_ansible_version: 2.1
+
+  min_ansible_container_version: 2.9
+
+  platforms:
+    - name: RHEL
+      versions:
+        - 8
+    - name: Rocky Linux
+      versions:
+        - 8
+
+  galaxy_tags:
+    - dnf
+    - update
+    - rhel
+
+dependencies: []

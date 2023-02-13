@@ -1,0 +1,12 @@
+---
+- name: Update all installed packages using YUM module
+  dnf:
+    name: '*'
+    state: latest
+    update_cache: true
+    update_only: true
+  register: dnfupdate_status
+
+- name: Remove packates not needed anymore
+  dnf:
+    autoremove: true
