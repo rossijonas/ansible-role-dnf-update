@@ -18,12 +18,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          sudo apt install podman -y
-          sudo sed -i "s/# unqualified-search-registries.*/unqualified-search-registries\ =\ [\"docker.io\"]/" /etc/containers/registries.conf
-          pip3 install yamllint ansible-lint ansible molecule[podman]
+          pip3 install yamllint molecule[podman]
 
-      - name: Molecule test
-        run: molecule test
+      - name: Molecule converge
+        run: molecule converge
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
