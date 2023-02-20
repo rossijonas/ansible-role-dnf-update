@@ -20,8 +20,8 @@ jobs:
         run: |
           pip3 install yamllint molecule[podman]
 
-      - name: Molecule test
-        run: molecule test
+      - name: Molecule converge
+        run: molecule converge
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
