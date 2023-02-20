@@ -15,10 +15,10 @@ galaxy_info:
   platforms:
     - name: RHEL
       versions:
-        - 8
+        - "8"
     - name: Rocky Linux
       versions:
-        - 8
+        - "8"
 
   galaxy_tags:
     - dnf
