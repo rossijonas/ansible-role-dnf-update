@@ -2,7 +2,7 @@
 - name: Converge
   hosts: all
   roles:
-    - dnfupdate
-    - role: dnfupdate
+    - rossijonas.dnfupdate
+    - role: rossijonas.dnfupdate
       vars: 
         dnfupdate_security_only: true
