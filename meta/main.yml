@@ -25,4 +25,5 @@ galaxy_info:
     - update
     - rhel
 
-dependencies: []
+dependencies:
+  - containers.podman
