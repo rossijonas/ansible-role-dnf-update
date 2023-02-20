@@ -1,7 +1,8 @@
 ---
 - name: Converge
   hosts: all
-  tasks:
-    - name: "Include rossijonas.dnfupdate"
-      include_role:
-        name: "rossijonas.dnfupdate"
+  roles:
+    - dnfupdate
+    - role: dnfupdate
+      vars: 
+        dnfupdate_security_only: true
