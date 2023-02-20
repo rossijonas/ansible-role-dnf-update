@@ -21,7 +21,7 @@ jobs:
           sudo apt install podman -y
           sudo sed -i "s/# unqualified-search-registries.*/unqualified-search-registries\ =\ [\"docker.io\"]/" /etc/containers/registries.conf
           # pip3 install yamllint ansible-lint ansible molecule[podman]
-          pip3 install yamllint ansible-lint ansible molecule
+          pip3 install yamllint ansible-lint ansible molecule podman
 
       - name: Molecule test
         run: molecule test
