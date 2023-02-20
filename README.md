@@ -4,7 +4,7 @@
 
 ## About
 
-Use this Ansible role to apply system updates or 'security only' updates to systems that uses the `dnf` package manager.
+Use this Ansible role to apply system updates or 'security only' updates to systems using the `dnf` package manager.
 
 This Ansible role:
 
@@ -47,7 +47,7 @@ Set the role to apply only updates marked as security updates, instead of
     src: https://github.com/rossijonas/ansible-role-dnf-update
   ```
 
-2. Use `alsible-galaxy` command to fetch dependencies:
+2. Use `ansible-galaxy` command to fetch dependencies:
 
   ```
   $ ansible-galaxy install -r requirements.yml
