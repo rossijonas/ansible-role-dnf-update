@@ -24,7 +24,7 @@ This Ansible role:
 
 ### `dnfupdate_security_only`
 
-Set the role to apply only updates marked as security updates, instead of 
+Set the role to only apply updates marked as security updates.
 
 * **Type**: bool
 * **Default**: `false`
@@ -53,13 +53,26 @@ Set the role to apply only updates marked as security updates, instead of
   $ ansible-galaxy install -r requirements.yml
   ```
 
-## Example Playbook
+## Example Playbooks
+
+* Apply all updates available:
 
 ```
 ---
 - hosts: servers
   roles:
     - dnfupdate
+```
+
+* Apply security updates only:
+
+```
+---
+- hosts: servers
+  roles:
+    - role: dnfupdate
+      vars: 
+        dnfupdate_security_only: true
 ```
 
 ## License

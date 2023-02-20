@@ -1,12 +1,13 @@
 ---
-- name: Update all installed packages using YUM module
+- name: Apply updates using dnf module.
   dnf:
     name: '*'
+    security: '{{ dnfupdate_security_only }}'
     state: latest
     update_cache: true
     update_only: true
   register: dnfupdate_status
 
-- name: Remove packates not needed anymore
+- name: Remove packages not needed anymore
   dnf:
     autoremove: true
